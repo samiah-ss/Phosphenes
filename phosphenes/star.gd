@@ -3,6 +3,7 @@ extends TextureButton
 @onready var vl1 = $"/root/Sprite2D/vl1" # Fetch the dialogue as a variable.
 
 func _pressed():
+	disabled = true # Disable the clickability of the button here to prevent workarounds.
 	vl1.modulate.a = 0.0 # Start without transparency.
 	vl1.visible = true # Make dialogue visible.
 	get_parent().star_found() # Get and run the star_found function from the parent object.

@@ -36,25 +36,26 @@ offset_right = 1165.0
 offset_bottom = 348.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("6_w12x5")
+script = ExtResource("5_51p13")
 
 [node name="Star2" type="TextureButton" parent="GameManager" unique_id=87658309]
-offset_left = -607.0
-offset_top = -65.0
-offset_right = -107.0
-offset_bottom = 435.0
-scale = Vector2(0.05, 0.05)
+offset_left = -902.0
+offset_top = 435.0
+offset_right = -402.0
+offset_bottom = 935.0
+scale = Vector2(0.1, 0.1)
 texture_normal = ExtResource("4_lk3y4")
 script = ExtResource("7_ysd0p")
 
-[node name="Star3" type="TextureButton" parent="GameManager" unique_id=590906413]
-offset_left = -900.0
-offset_top = 484.0
-offset_right = -400.0
-offset_bottom = 984.0
-scale = Vector2(0.07, 0.07)
+[node name="Star3" type="TextureButton" parent="GameManager" unique_id=439545313]
+offset_left = 1095.0002
+offset_top = -2277.0002
+offset_right = 1595.0002
+offset_bottom = -1777.0002
+scale = Vector2(0.05, 0.05)
+pivot_offset = Vector2(-1800, 2339.9998)
 texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("5_51p13")
+script = ExtResource("6_w12x5")
 
 [node name="onestartext" type="Label" parent="GameManager" unique_id=889127162]
 offset_left = 221.0
