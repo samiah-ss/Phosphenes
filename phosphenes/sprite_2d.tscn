@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://nixsburaaa44"]
+
+[ext_resource type="Texture2D" uid="uid://c7dosx20mwv5r" path="res://Assets/blackround.PNG" id="1_f7cmv"]
+[ext_resource type="Texture2D" uid="uid://bduyoyniwqbm8" path="res://Assets/3.png" id="2_i1wwn"]
+[ext_resource type="Texture2D" uid="uid://cjq2jd1375lmo" path="res://Assets/1.png" id="3_51p13"]
+[ext_resource type="Texture2D" uid="uid://c4a57olac8o8b" path="res://Assets/5.png" id="4_lk3y4"]
+[ext_resource type="Script" uid="uid://bf83ebi05nm1o" path="res://star.gd" id="5_51p13"]
+[ext_resource type="Script" uid="uid://ktdcbjvgla6b" path="res://node.gd" id="6_lk3y4"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=225258411]
+position = Vector2(0, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_f7cmv")
+metadata/_edit_lock_ = true
+
+[node name="Phosphenes" type="Sprite2D" parent="." unique_id=1578191352]
+scale = Vector2(2, 2)
+texture = ExtResource("2_i1wwn")
+metadata/_edit_lock_ = true
+
+[node name="Astronaut" type="Sprite2D" parent="." unique_id=1983940670]
+position = Vector2(0, 14)
+scale = Vector2(2, 2)
+texture = ExtResource("3_51p13")
+metadata/_edit_lock_ = true
+
+[node name="GameManager" type="Node" parent="." unique_id=1065324265]
+script = ExtResource("6_lk3y4")
+
+[node name="Star" type="TextureButton" parent="GameManager" unique_id=2071595939]
+offset_left = -249.0
+offset_top = -640.0
+offset_right = 1671.0
+offset_bottom = 440.0
+texture_normal = ExtResource("4_lk3y4")
+script = ExtResource("5_51p13")
+
+[node name="Star2" type="TextureButton" parent="GameManager" unique_id=87658309]
+offset_left = -401.0
+offset_top = -264.0
+offset_right = 1519.0
+offset_bottom = 816.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("4_lk3y4")
+script = ExtResource("5_51p13")
+
+[node name="Star3" type="TextureButton" parent="GameManager" unique_id=590906413]
+offset_left = -1309.0
+offset_top = 218.0
+offset_right = 611.0
+offset_bottom = 1298.0
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("4_lk3y4")
+script = ExtResource("5_51p13")
+
+[node name="onestartext" type="Label" parent="GameManager" unique_id=889127162]
+offset_left = 221.0
+offset_top = 71.0
+offset_right = 506.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "- Find 1 Star"
+
+[node name="twostartext" type="Label" parent="GameManager" unique_id=837040382]
+offset_left = 221.0
+offset_top = 129.0
+offset_right = 530.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "- Find 2 Stars"
+
+[node name="threestartext" type="Label" parent="GameManager" unique_id=2048820945]
+offset_left = 221.0
+offset_top = 186.0
+offset_right = 530.0
+offset_bottom = 255.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 50
+text = "- Find 3 Stars"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1435388569]
+
+[node name="List1" type="Label" parent="." unique_id=1744501539]
+offset_left = 442.0
+offset_top = -26.0
+offset_right = 950.0
+offset_bottom = 111.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+text = "To-Do List:"
