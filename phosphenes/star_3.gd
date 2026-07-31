@@ -1,6 +1,6 @@
 extends TextureButton
 
-@onready var vl1 = $"/root/Sprite2D/vl1"
+@onready var vl1 = $"/root/Sprite2D/vl3"
 
 func _pressed():
 	vl1.modulate.a = 0.0

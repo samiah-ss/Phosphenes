@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://c4a57olac8o8b" path="res://Assets/5.png" id="4_lk3y4"]
 [ext_resource type="Script" uid="uid://bf83ebi05nm1o" path="res://star.gd" id="5_51p13"]
 [ext_resource type="Script" uid="uid://ktdcbjvgla6b" path="res://node.gd" id="6_lk3y4"]
+[ext_resource type="Script" uid="uid://ctl5q02c0l3nf" path="res://star_3.gd" id="6_w12x5"]
+[ext_resource type="Script" uid="uid://fgbq1yi40ijf" path="res://star_2.gd" id="7_ysd0p"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=225258411]
 position = Vector2(0, 10)
@@ -28,28 +30,29 @@ metadata/_edit_lock_ = true
 script = ExtResource("6_lk3y4")
 
 [node name="Star" type="TextureButton" parent="GameManager" unique_id=2071595939]
-offset_left = -249.0
-offset_top = -640.0
-offset_right = 1671.0
-offset_bottom = 440.0
-texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("5_51p13")
-
-[node name="Star2" type="TextureButton" parent="GameManager" unique_id=87658309]
-offset_left = -401.0
-offset_top = -264.0
-offset_right = 1519.0
-offset_bottom = 816.0
+offset_left = 665.0
+offset_top = -152.0
+offset_right = 1165.0
+offset_bottom = 348.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("5_51p13")
+script = ExtResource("6_w12x5")
+
+[node name="Star2" type="TextureButton" parent="GameManager" unique_id=87658309]
+offset_left = -607.0
+offset_top = -65.0
+offset_right = -107.0
+offset_bottom = 435.0
+scale = Vector2(0.05, 0.05)
+texture_normal = ExtResource("4_lk3y4")
+script = ExtResource("7_ysd0p")
 
 [node name="Star3" type="TextureButton" parent="GameManager" unique_id=590906413]
-offset_left = -1309.0
-offset_top = 218.0
-offset_right = 611.0
-offset_bottom = 1298.0
-scale = Vector2(0.5, 0.5)
+offset_left = -900.0
+offset_top = 484.0
+offset_right = -400.0
+offset_bottom = 984.0
+scale = Vector2(0.07, 0.07)
 texture_normal = ExtResource("4_lk3y4")
 script = ExtResource("5_51p13")
 
@@ -82,6 +85,44 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "- Find 3 Stars"
+
+[node name="vl1" type="Label" parent="." unique_id=728116437]
+visible = false
+offset_left = -276.0
+offset_top = -590.0
+offset_right = 814.0
+offset_bottom = -169.0
+theme_override_font_sizes/font_size = 75
+text = "“You found me! And I thought 
+rockets were great for hide-
+and-seek games...”
+"
+
+[node name="vl2" type="Label" parent="." unique_id=943654301]
+visible = false
+offset_left = -224.0
+offset_top = -676.0
+offset_right = 1470.0
+offset_bottom = -149.0
+theme_override_font_sizes/font_size = 75
+text = "“Remember when you thought 
+there were tigers onboard 
+because the engines 
+were just that loud? Hah!”
+"
+
+[node name="vl3" type="Label" parent="." unique_id=363161151]
+visible = false
+offset_left = -248.0
+offset_top = -754.0
+offset_right = 1112.0
+offset_bottom = -227.0
+theme_override_font_sizes/font_size = 75
+text = "“The phosphenes you always 
+talked about...I had no idea 
+what they were until I tried to 
+take a nap in space for the 
+first time.”"
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1435388569]
 
