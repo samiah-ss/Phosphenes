@@ -4,6 +4,8 @@ extends Node
 @onready var label1 = $"/root/Sprite2D/GameManager/onestartext"
 @onready var label2 = $"/root/Sprite2D/GameManager/twostartext"
 @onready var label3 = $"/root/Sprite2D/GameManager/threestartext"
+@onready var label4 = $"/root/Sprite2D/GameManager/fourstartext"
+@onready var label5 = $"/root/Sprite2D/GameManager/fivestartext"
 @onready var List1 = $"/root/Sprite2D/List1"
 
 var stars_found = 0 # Initialize a lack of found stars.
@@ -24,6 +26,10 @@ func update_labels():
 		label2.modulate = Color.BLACK
 	if stars_found >= 3:
 		label3.modulate = Color.BLACK
+	if stars_found >= 4:
+		label4.modulate = Color.BLACK
+	if stars_found >=5:
+		label5.modulate = Color.BLACK
 		await get_tree().create_timer(0.5).timeout
 		List1.modulate = Color.BLACK
 		await get_tree().create_timer(3).timeout
@@ -31,4 +37,4 @@ func update_labels():
 		var fade_tween = create_tween() # Create a tween for a part fade-in transition
 		fade_tween.tween_property($CanvasLayer/ColorRect, "modulate:a", 1.0, 1.0).set_trans(Tween.TRANS_LINEAR)
 		await fade_tween.finished # Wait until the tween is finished before switching scenes.
-		get_tree().change_scene_to_file("res://part2.tscn")
+		get_tree().change_scene_to_file("res://part3.tscn")

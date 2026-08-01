@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Phosphenes"
-run/main_scene="res://part1.tscn"
+run/main_scene="uid://bbp8it7abdaio"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/stretch/mode="canvas_items"
+
+[gui]
+
+theme/custom_font="uid://on2nigt2gw0u"
 
 [physics]
 

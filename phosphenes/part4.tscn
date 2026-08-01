@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://daytpi050bk4w"]
+
+[ext_resource type="Texture2D" uid="uid://c7dosx20mwv5r" path="res://Assets/blackround.PNG" id="1_8bpot"]
+[ext_resource type="Script" uid="uid://dce50q8u76tpj" path="res://transitionagain.gd" id="2_8bpot"]
+[ext_resource type="Texture2D" uid="uid://bduyoyniwqbm8" path="res://Assets/3.png" id="2_84oxq"]
+[ext_resource type="Texture2D" uid="uid://cjq2jd1375lmo" path="res://Assets/1.png" id="3_8d13w"]
+[ext_resource type="Texture2D" uid="uid://c6f1bq3rd1dbo" path="res://Assets/hallucinationmore.png" id="4_t4p1a"]
+[ext_resource type="Texture2D" uid="uid://c4a57olac8o8b" path="res://Assets/5.png" id="5_4p6tn"]
+[ext_resource type="Texture2D" uid="uid://4jxe4g840fh" path="res://Assets/2.png" id="5_ar7ng"]
+[ext_resource type="Script" uid="uid://bj6vixqfbk2uo" path="res://revive.gd" id="7_ar7ng"]
+
+[node name="Sprite2D" type="Sprite2D" unique_id=225258411]
+position = Vector2(0, 10)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_8bpot")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1818995993]
+script = ExtResource("2_8bpot")
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=856966732]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Phosphenes" type="Sprite2D" parent="." unique_id=1578191352]
+scale = Vector2(2, 2)
+texture = ExtResource("2_84oxq")
+metadata/_edit_lock_ = true
+
+[node name="Astronaut" type="Sprite2D" parent="." unique_id=1983940670]
+position = Vector2(0, 14)
+scale = Vector2(2, 2)
+texture = ExtResource("3_8d13w")
+metadata/_edit_lock_ = true
+
+[node name="Astronaut2" type="Sprite2D" parent="." unique_id=213778700]
+position = Vector2(500, 14)
+scale = Vector2(2, 2)
+texture = ExtResource("4_t4p1a")
+
+[node name="Astronaut3" type="Sprite2D" parent="." unique_id=892406542]
+position = Vector2(1000, 14)
+scale = Vector2(2, 2)
+texture = ExtResource("5_ar7ng")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1435388569]
+
+[node name="Death" type="Label" parent="." unique_id=2056307635]
+offset_left = -1530.0
+offset_top = -690.0
+offset_right = -842.0
+offset_bottom = -485.0
+theme_override_font_sizes/font_size = 150
+text = "You Died!"
+
+[node name="It\'sInevitable" type="Label" parent="." unique_id=741771655]
+offset_left = -1392.0
+offset_top = -504.0
+offset_right = -383.0
+offset_bottom = -299.0
+theme_override_font_sizes/font_size = 95
+text = "It's inevitable."
+
+[node name="Revive?" type="TextureButton" parent="." unique_id=1776104690]
+offset_left = 890.0
+offset_top = -858.0
+offset_right = 1390.0
+offset_bottom = -358.0
+scale = Vector2(2, 2)
+focus_mode = 0
+texture_normal = ExtResource("5_4p6tn")
+script = ExtResource("7_ar7ng")
+
+[node name="Revive_" type="Label" parent="Revive?" unique_id=1776278047]
+layout_mode = 0
+offset_left = 127.0
+offset_top = 204.0
+offset_right = 1136.0
+offset_bottom = 408.99997
+theme_override_colors/font_color = Color(0.39118537, 0.39118534, 0.39118534, 1)
+theme_override_font_sizes/font_size = 70
+text = "Revive?"
