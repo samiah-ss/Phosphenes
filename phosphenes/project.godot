@@ -25,6 +25,10 @@ window/stretch/mode="canvas_items"
 
 theme/custom_font="uid://on2nigt2gw0u"
 
+[input_devices]
+
+pointing/android/enable_long_press_as_right_click=true
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -33,3 +37,4 @@ theme/custom_font="uid://on2nigt2gw0u"
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
