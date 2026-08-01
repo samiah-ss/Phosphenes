@@ -7,6 +7,9 @@ extends Node
 
 var stars_found = 0 # Initialize a lack of found stars.
 
+func _ready(): # On ready, the player should not be able to see the ColorRect.
+	$CanvasLayer/ColorRect.modulate.a = 0.0
+
 # Update levels once star count increases.
 func star_found():
 	stars_found+=1
@@ -20,3 +23,9 @@ func update_labels():
 		label2.modulate = Color.BLACK
 	if stars_found >= 3:
 		label3.modulate = Color.BLACK
+		await get_tree().create_timer(3).timeout
+		$CanvasLayer/ColorRect.modulate.a = 0.0
+		var fade_tween = create_tween() # Create a tween for a part fade-in transition
+		fade_tween.tween_property($CanvasLayer/ColorRect, "modulate:a", 1.0, 1.0,).set_trans(Tween.TRANS_LINEAR)
+		await fade_tween.finished # Wait until the tween is finished before switching scenes.
+		get_tree().change_scene_to_file("res://part2.tscn")

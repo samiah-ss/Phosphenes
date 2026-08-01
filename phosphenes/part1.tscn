@@ -1,33 +1,33 @@
 [gd_scene format=3 uid="uid://nixsburaaa44"]
 
-[ext_resource type="Texture2D" uid="uid://c7dosx20mwv5r" path="res://Assets/blackround.PNG" id="1_f7cmv"]
-[ext_resource type="Texture2D" uid="uid://bduyoyniwqbm8" path="res://Assets/3.png" id="2_i1wwn"]
-[ext_resource type="Texture2D" uid="uid://cjq2jd1375lmo" path="res://Assets/1.png" id="3_51p13"]
-[ext_resource type="Texture2D" uid="uid://c4a57olac8o8b" path="res://Assets/5.png" id="4_lk3y4"]
-[ext_resource type="Script" uid="uid://bf83ebi05nm1o" path="res://star.gd" id="5_51p13"]
-[ext_resource type="Script" uid="uid://ktdcbjvgla6b" path="res://node.gd" id="6_lk3y4"]
-[ext_resource type="Script" uid="uid://ctl5q02c0l3nf" path="res://star_3.gd" id="6_w12x5"]
-[ext_resource type="Script" uid="uid://fgbq1yi40ijf" path="res://star_2.gd" id="7_ysd0p"]
+[ext_resource type="Texture2D" uid="uid://c7dosx20mwv5r" path="res://Assets/blackround.PNG" id="1_nnky2"]
+[ext_resource type="Texture2D" uid="uid://bduyoyniwqbm8" path="res://Assets/3.png" id="2_ipnwi"]
+[ext_resource type="Texture2D" uid="uid://cjq2jd1375lmo" path="res://Assets/1.png" id="3_v6jir"]
+[ext_resource type="Script" uid="uid://ktdcbjvgla6b" path="res://node.gd" id="4_2tox1"]
+[ext_resource type="Texture2D" uid="uid://c4a57olac8o8b" path="res://Assets/5.png" id="5_0nojs"]
+[ext_resource type="Script" uid="uid://bf83ebi05nm1o" path="res://star.gd" id="6_yjxs2"]
+[ext_resource type="Script" uid="uid://fgbq1yi40ijf" path="res://star_2.gd" id="7_gnfso"]
+[ext_resource type="Script" uid="uid://ctl5q02c0l3nf" path="res://star_3.gd" id="8_opw7d"]
 
 [node name="Sprite2D" type="Sprite2D" unique_id=225258411]
 position = Vector2(0, 10)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_f7cmv")
+texture = ExtResource("1_nnky2")
 metadata/_edit_lock_ = true
 
 [node name="Phosphenes" type="Sprite2D" parent="." unique_id=1578191352]
 scale = Vector2(2, 2)
-texture = ExtResource("2_i1wwn")
+texture = ExtResource("2_ipnwi")
 metadata/_edit_lock_ = true
 
 [node name="Astronaut" type="Sprite2D" parent="." unique_id=1983940670]
 position = Vector2(0, 14)
 scale = Vector2(2, 2)
-texture = ExtResource("3_51p13")
+texture = ExtResource("3_v6jir")
 metadata/_edit_lock_ = true
 
 [node name="GameManager" type="Node" parent="." unique_id=1065324265]
-script = ExtResource("6_lk3y4")
+script = ExtResource("4_2tox1")
 
 [node name="Star" type="TextureButton" parent="GameManager" unique_id=2071595939]
 offset_left = 665.0
@@ -35,8 +35,8 @@ offset_top = -152.0
 offset_right = 1165.0
 offset_bottom = 348.0
 scale = Vector2(0.2, 0.2)
-texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("5_51p13")
+texture_normal = ExtResource("5_0nojs")
+script = ExtResource("6_yjxs2")
 
 [node name="Star2" type="TextureButton" parent="GameManager" unique_id=87658309]
 offset_left = -902.0
@@ -44,8 +44,8 @@ offset_top = 435.0
 offset_right = -402.0
 offset_bottom = 935.0
 scale = Vector2(0.1, 0.1)
-texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("7_ysd0p")
+texture_normal = ExtResource("5_0nojs")
+script = ExtResource("7_gnfso")
 
 [node name="Star3" type="TextureButton" parent="GameManager" unique_id=439545313]
 offset_left = 1095.0002
@@ -54,8 +54,8 @@ offset_right = 1595.0002
 offset_bottom = -1777.0002
 scale = Vector2(0.05, 0.05)
 pivot_offset = Vector2(-1800, 2339.9998)
-texture_normal = ExtResource("4_lk3y4")
-script = ExtResource("6_w12x5")
+texture_normal = ExtResource("5_0nojs")
+script = ExtResource("8_opw7d")
 
 [node name="onestartext" type="Label" parent="GameManager" unique_id=889127162]
 offset_left = 221.0
@@ -86,6 +86,17 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 50
 text = "- Find 3 Stars"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="GameManager" unique_id=153996616]
+
+[node name="ColorRect" type="ColorRect" parent="GameManager/CanvasLayer" unique_id=587582890]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
 
 [node name="vl1" type="Label" parent="." unique_id=728116437]
 visible = false
