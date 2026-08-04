@@ -15,7 +15,6 @@ texture = ExtResource("1_qcmsf")
 metadata/_edit_lock_ = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1818995993]
-visible = false
 script = ExtResource("2_2kc2t")
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=856966732]
